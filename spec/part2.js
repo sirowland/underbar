@@ -436,9 +436,9 @@
         var memoSpy = _.memoize(spy);
 
         memoSpy(10);
-        expect(spy).to.have.been.calledOnce;
+        expect(spy).to.have.been.called.once;
         memoSpy(10);
-        expect(spy).to.have.been.calledOnce;
+        expect(spy).to.have.been.called.once;
       });
       
       it('should not run the memoized function twice when given a reference type as an argument', function() {
@@ -447,9 +447,9 @@
         var memoSpy = _.memoize(spy);
 
         memoSpy([1,2,3]);
-        expect(spy).to.have.been.calledOnce;
+        expect(spy).to.have.been.called.once;
         memoSpy([1,2,3]);
-        expect(spy).to.have.been.calledOnce;
+        expect(spy).to.have.been.called.once;
       });
 
       it('should run the memoized function twice when given an array and then given a list of arguments', function() {
@@ -458,9 +458,9 @@
         var memoSpy = _.memoize(spy);
 
         memoSpy([1,2,3]);
-        expect(spy).to.have.been.calledOnce;
+        expect(spy).to.have.been.called.once;
         memoSpy(1,2,3);
-        expect(spy).to.have.been.calledTwice;
+        expect(spy).to.have.been.called.twice;
       });
     });
 
