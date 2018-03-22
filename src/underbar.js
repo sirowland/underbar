@@ -326,7 +326,7 @@
     var cache = {};
 
     return function () {
-      var string = Array.prototype.slice.call(arguments);
+      var string = JSON.stringify(arguments);
       if (!cache[string]) {
         return cache[string] = func.apply(this, arguments); 
       } else {
